@@ -31,11 +31,13 @@ to work properly.
   * [Details](https://learn.adafruit.com/adafruit-mics5524-gas-sensor-breakout)
   * [manufacturer usage details](https://www.sgxsensortech.com/content/uploads/2014/08/AN-0172-SGX-Metal-Oxide-Gas-Sensors-V1.pdf)
 
-Includes a voltage regulator
+Does not include voltage regulator and requires a level shifter to read the analog output pin on the MKR1000
+
 
 | specification | units |
 | ----- | ---- |
 | Input voltage  | 5v |
+| Analog out pin voltage | 5v |
 | current draw | 35 mA |
 
     
@@ -53,6 +55,7 @@ Includes a voltage regulator
 | specification | units |
 | ----- | ---- |
 | Input voltage  | 3v or 5v |
+| Logic pin voltage | 3v or 5v |
 
 
 #### CCS811 - Gas Sensor
