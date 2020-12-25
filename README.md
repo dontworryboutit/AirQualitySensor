@@ -13,6 +13,8 @@
   * [Product page](https://store.arduino.cc/usa/arduino-mkr1000)
   * [diagrams](https://content.arduino.cc/assets/Pinout-MKR1000_latest.pdf)
   * [Arduino Getting Started Guide](https://www.arduino.cc/en/Guide/MKR1000/)
+  * [Adding another wire interface](https://www.arduino.cc/en/Tutorial/SamdSercom/#create-a-new-wire-instance)
+  * [wifi module overview](https://www.arduino.cc/en/Reference/WiFi101)
 
 
 ### Integrated Circuits
@@ -109,6 +111,14 @@ Includes voltage regulator
 | ----- | ---- |
 | Input voltage  | 3v or 5v |
 | Logic pin voltage | 3v or 5v |
+
+
+
+## Development
+
+### Arduino CLI overview
+
+
 
 
 
