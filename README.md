@@ -1,5 +1,7 @@
 # Air Quality Sensor
 
+[Trello board for project](https://trello.com/b/QzJ9ahUh/air-quality-sensor)
+
 
 ## Components
 
@@ -10,11 +12,12 @@
 * Arduino MKR1000
   * [Product page](https://store.arduino.cc/usa/arduino-mkr1000)
   * [diagrams](https://content.arduino.cc/assets/Pinout-MKR1000_latest.pdf)
+  * [Arduino Getting Started Guide](https://www.arduino.cc/en/Guide/MKR1000/)
 
 
 ### Integrated Circuits
 
-#### MICS 5524 - Carbon Monoxide, Alcohol and VOC Gas Sensor
+##### MICS 5524 - Carbon Monoxide, Alcohol and VOC Gas Sensor
 
 Sensor is sensitive to several gases but can't distinguish between which gas.
 
@@ -49,6 +52,7 @@ Includes a voltage regulator
 | ----- | ---- |
 | Input voltage  | 3v or 5v |
 
+
 #### CCS811 - Gas Sensor
 
 VOC and eCO2 Sensor
@@ -66,17 +70,29 @@ Includes voltage regulator
 | ----- | ---- |
 | Input voltage  | 3v or 5v |
 | Logic pin voltage | 3v or 5v |
+
   
 #### BME280 - Pressure, temp, humidity
   * [Product page](https://www.adafruit.com/product/2652)
   
  temperature, barometric pressure and humidity sensor 
 
+
 #### PMS5003 - Digital Particle Concentration Laser Sensor
 
   * [Product page](https://www.adafruit.com/product/3686)
+  * [Manufacturers manual](https://cdn-shop.adafruit.com/product-files/3686/plantower-pms5003-manual_v2-3.pdf)
+  * [Adafruit guide](https://learn.adafruit.com/pm25-air-quality-sensor)
   
 PM2.5 Air Quality Sensor
+
+Without breakout board
+
+| specification | units |
+| ----- | ---- |
+| Input voltage  | 5v |
+| Logic pin voltage | 3.3v |
+
 
 #### TCA9548A
 
@@ -93,3 +109,9 @@ Includes voltage regulator
 | ----- | ---- |
 | Input voltage  | 3v or 5v |
 | Logic pin voltage | 3v or 5v |
+
+
+
+## Potentially useful links
+
+* [Adafruit IoT Environmental Sensor](https://learn.adafruit.com/remote-iot-environmental-sensor)
