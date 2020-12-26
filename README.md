@@ -79,9 +79,17 @@ Includes voltage regulator
   
 #### BME280 - Pressure, temp, humidity
   * [Product page](https://www.adafruit.com/product/2652)
+  * [Details and usage](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/pinouts)
+  * [detailed arduino usage](https://learn.adafruit.com/adafruit-tca9548a-1-to-8-i2c-multiplexer-breakout/wiring-and-test)
   
  temperature, barometric pressure and humidity sensor 
 
+Includes voltage regulator
+
+| specification | units |
+| ----- | ---- |
+| Input voltage  | 3v or 5v |
+| Logic pin voltage | 3v or 5v |
 
 #### PMS5003 - Digital Particle Concentration Laser Sensor
 
