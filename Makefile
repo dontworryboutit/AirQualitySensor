@@ -1,6 +1,6 @@
 PORT := $(shell arduino-cli board list | grep -i MKR1000 | awk '{print $$1}')
 FQBN := "arduino:samd:mkr1000"
-PROJECT_NAME = Blink
+PROJECT_NAME = MultiSensor
 
 connect:
 	cd src/$(PROJECT_NAME) && arduino-cli board attach serial://$(PORT) $(PROJECT_NAME)
