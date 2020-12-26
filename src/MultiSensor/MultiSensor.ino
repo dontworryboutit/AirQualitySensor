@@ -334,7 +334,7 @@ void readPMS5003data() {
   if (readPMSdata(&Serial1)) {
     // reading data was successful!
     Serial.println();
-    Serial.println("---------------------------------------");
+    Serial.println("-----------------------------------");
     Serial.println("Concentration Units (standard)");
     Serial.print("PM 1.0: "); Serial.print(data.pm10_standard);
     Serial.print("\t\tPM 2.5: "); Serial.print(data.pm25_standard);
@@ -352,30 +352,56 @@ void readPMS5003data() {
     Serial.print("Particles > 5.0um / 0.1L air:"); Serial.println(data.particles_50um);
     Serial.print("Particles > 10.0 um / 0.1L air:"); Serial.println(data.particles_100um);
     Serial.println("---------------------------------------");
+  } else {
+    Serial.println('Skipping PMS5003 reading...');
   }
+}
+
+void displayPMS5003data() {
+    display.println("Concentration Units (standard)");
+    display.print("PM 1.0: "); display.print(data.pm10_standard);
+    display.print("\t\tPM 2.5: "); display.print(data.pm25_standard);
+    display.print("\t\tPM 10: "); display.println(data.pm100_standard);
+    display.println("------------------------------");
+    display.println("Concentration Units (environmental)");
+    display.print("PM 1.0: "); display.print(data.pm10_env);
+    display.print("\t\tPM 2.5: "); display.print(data.pm25_env);
+    display.print("\t\tPM 10: "); display.println(data.pm100_env);
+    display.println("----------------------------");
+    display.print("Par. > 0.3um / 0.1L air:"); display.println(data.particles_03um);
+    display.print("Par. > 0.5um / 0.1L air:"); display.println(data.particles_05um);
+    display.print("Par. > 1.0um / 0.1L air:"); display.println(data.particles_10um);
+    display.print("Par. > 2.5um / 0.1L air:"); display.println(data.particles_25um);
+    display.print("Par. > 5.0um / 0.1L air:"); display.println(data.particles_50um);
+    display.print("Par. > 10.0um / 0.1L air:"); display.println(data.particles_100um);
+    display.println("---------------------------------------");
 }
 
 void prepDisplay() {
   display.clearBuffer();
   // large block of text
 
-  display.setCursor(10, 10);
+  display.setCursor(0, 5);
   display.setTextSize(1);
   display.setTextColor(EPD_BLACK);
 }
 
 void writeDisplay() {
   display.display();
+  delay(5000);
 }
 
 
 void loop() {
   prepDisplay();
-
   readBME260data();
   readCCS811data();
   readSGP30data();
-  readPMS5003data();
   writeDisplay();
-  delay(10000);
+
+  prepDisplay();
+  readPMS5003data();
+  displayPMS5003data();
+  writeDisplay();
+
 }
